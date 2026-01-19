@@ -1974,6 +1974,9 @@ const I18N_PT = {
   "Stochastic AA": "AA estocástico",
   "Stochastic blend": "Mistura estocástica",
   "Joint LOD fade": "Fade de LOD das juntas",
+  "Fade start (ft)": "Início do fade (ft)",
+  "Fade end (ft)": "Fim do fade (ft)",
+  "Fade strength": "Força do fade",
 
   "Pores strength": "Força dos poros",
   "Pores scale": "Escala dos poros",
@@ -1982,6 +1985,12 @@ const I18N_PT = {
   "Figure (cathedral)": "Figura (catedral)",
   "Figure freq": "Freq. da figura",
   "Pebble strength": "Força do granulado",
+  "Pebble scale": "Escala do granulado",
+  "Pebble sharp": "Nitidez do granulado",
+  "Pebble mid": "Médio do granulado",
+  "Pebble width": "Largura do granulado",
+  "Pebble grain mix": "Mistura de granulado/veio",
+  "Pebble AA": "AA do granulado",
 
   "Enable end joints": "Ativar juntas de topo",
   "Joint width (in)": "Largura da junta (pol)",
@@ -2006,12 +2015,32 @@ const I18N_PT = {
   "Player-relative (side/forward)": "Relativo ao jogador (lado/frente)",
   "Ball X (ft)": "Bola X (ft)",
   "Ball Z (ft)": "Bola Z (ft)",
+  "Grab ball to hand": "Segurar bola na mão",
+  "Dribble style": "Estilo de drible",
+  "Physics (hand slap)": "Física (tapa da mão)",
+  "Legacy (hand-follow)": "Legado (mão seguindo)",
+  "Hand target": "Alvo da mão",
+  "Ideal (no arm anim needed)": "Ideal (sem animação do braço)",
+  "Rig (uses animated hand)": "Rig (usa mão animada)",
+  "Auto slap": "Tapa automático",
+  "Slap strength (ft/s)": "Força do tapa (ft/s)",
+  "Keys:": "Teclas:",
+  "=slap,": "=tapa,",
+  "=grab.": "=agarrar.",
+  "Tip: enable": "Dica: ative",
+  "to verify the correct hand attachment; then disable grab and try physics dribble.": "para verificar o encaixe correto da mão; depois desative o agarrar e tente o drible físico.",
 
   "Show player": "Mostrar jogador",
   "Player scale": "Escala do jogador",
-  "Dribble loop": "Loop de drible",
-  "Dribble hand": "Mão do drible",
   "Anim speed": "Velocidade da animação",
+  "Dribble loop": "Loop de drible",
+  "Dribble arm pose": "Pose do braço no drible",
+  "Dribble hand": "Mão do drible",
+  "Arm IK (hybrid)": "IK do braço (híbrido)",
+  "IK contact mix": "Mistura de contato do IK",
+  "IK rail drop": "Queda do trilho do IK",
+  "IK elbow out": "Cotovelo para fora (IK)",
+  "IK wrist down": "Pulso para baixo (IK)",
   "Right": "Direita",
   "Left": "Esquerda",
 
@@ -2035,6 +2064,13 @@ const I18N_PT = {
   "Sideline": "Lateral",
 
   "Reset everything": "Resetar tudo",
+  "Tools:": "Ferramentas:",
+  "Export/import a JSON snapshot of the current UI settings (Controls + Player panels).": "Exporte/importe um snapshot JSON das configurações atuais da UI (painéis Controles + Jogador).",
+  "Tip: Export writes JSON into the box and attempts to copy to clipboard.": "Dica: Export grava o JSON na caixa e tenta copiar para a área de transferência.",
+  "Settings snapshot (JSON)": "Snapshot de configurações (JSON)",
+  "Export": "Exportar",
+  "Import": "Importar",
+  "Clear": "Limpar",
 
   "v15: Shared lighting (court+ball) + lighting controls": "v15: Iluminação compartilhada (quadra+bola) + controles de iluminação",
   "Note: when the player faces the camera, the player's RIGHT side appears on YOUR left.": "Nota: quando o jogador fica de frente para a câmera, o lado DIREITO dele aparece à SUA esquerda.",
@@ -2068,6 +2104,7 @@ function setUILang(lang){
   // Button label: shows the OTHER language you can switch to
   if(langBtn){
     langBtn.textContent = (uiLang === "pt") ? "EN" : "PT-BR";
+    langBtn.title = (uiLang === "pt") ? "Alternar idioma" : "Toggle language";
   }
 
   // Translate UI text nodes inside #ui (skip elements marked data-i18n-skip="1")
